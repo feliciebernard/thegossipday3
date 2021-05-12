@@ -6,7 +6,8 @@
     <h5 class="card-title"><%= @gossips.title%></h5>
     <h3 class="card-title"></h3>
     <p class="card-text"><%= @gossips.content%> </p>
-    <%= link_to "@gossips.user.first_name @gossips.user.last_name", "user_id_path(@gossip.user_id)",class:"btn btn-primary d-flex justify-content-center" %>
+    <a href="/users/<%=@gossips.user.id%>" class="btn btn-primary d-flex justify-content-center"><%=@gossips.user.first_name%> <%=@gossips.user.last_name%></a>
+    <p><br>🏠<a href="/cities/<%=@gossips.user.city.id%>"><%=@gossips.user.city.name%></a></p>
    </div>
     </div>
 </div>

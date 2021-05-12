@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   get '/contact', to: 'the_gossip_project#contact'
   get '/welcome/:potineur', to: 'the_gossip_project#welcome'
   get '/welcome', to: 'the_gossip_project#welcome'
-  get '/users/:id', to: 'users#show'
   resources :gossips
-  #resources :users
+  resources :users
   resources :tags
+  resources :cities
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
